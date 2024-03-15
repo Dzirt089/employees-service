@@ -1,0 +1,26 @@
+﻿{
+  "profiles": {
+    "EmployeesService.Hosting": {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "launchBrowser": false,
+      "applicationUrl": "https://localhost:5001;http://localhost:5000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ConnectionString" : "Host=localhost;Port=5425;Database=employees-service;Username=postgres;Password=employeeServicePassword;",
+        "BootstrapServers" : "localhost:9092",
+        "Topic" : "employee_notification_event"
+      }
+    },
+    "Migration": {
+      "commandName": "Project",
+      "commandLineArgs": "migrate",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "USE_LOCAL_CONNECTION_STRINGS_OVERRIDE": "false",
+        "USE_LOCAL_ENDPOINTS_OVERRIDE": "false",
+        "ConnectionString" : "Host=localhost;Port=5425;Database=employees-service;Username=postgres;Password=postgres;"
+      }
+    }
+  }
+}
